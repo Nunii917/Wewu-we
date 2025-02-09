@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgive Me?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Bubblegum Sans', cursive;
+            text-align: center;
+            background-color: #ffe4f3;
+            padding: 50px;
+        }
+        .container {
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+        h1 {
+            color: black;
+            font-size: 42px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 28px;
+            margin: 15px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: 0.3s;
+            font-family: 'Bubblegum Sans', cursive;
+        }
+        .btn:hover {
+            background-color: #388E3C;
+        }
+        .message-box {
+            display: inline-block;
+            background-color: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .kitten {
+            width: 250px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="first-screen" class="container">
+        <div class="message-box">
+            <h1>Did you forgive me?</h1>
+        </div>
+        <br>
+        <img class="kitten" src="https://pngimg.com/uploads/cat/cat_PNG50484.png" alt="Sad kitten">
+        <br><br>
+        <button class="btn" onclick="showSecondScreen()">Yes</button>
+        <button class="btn" onclick="showSecondScreen()">Yes</button>
+    </div>
+
+    <div id="second-screen" class="container hidden">
+        <div class="message-box">
+            <h1>I knew you would forgive me!</h1>
+        </div>
+        <br>
+        <img class="kitten" src="https://pngimg.com/uploads/cat/cat_PNG50509.png" alt="Happy kitten">
+    </div>
+
+    <script>
+        function showSecondScreen() {
+            document.getElementById('first-screen').classList.add('hidden');
+            document.getElementById('second-screen').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
